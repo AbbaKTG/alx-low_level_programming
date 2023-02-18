@@ -7,11 +7,8 @@
 
 int main(void)
 {
-        char i;
-
-        for (i = 'a'; i <= 'z'; i++)
-                putchar(i);
-        putchar('\n');
+        for (int i = 0; i < 10; i++)
+                putchar(i + '0');
+        putchar('\n')
         return (0);
 }
-
