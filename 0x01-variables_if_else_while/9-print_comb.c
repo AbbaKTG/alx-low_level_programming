@@ -1,23 +1,25 @@
 #include <stdio.h>
 /**
- * main - main function
+ * main - main block
  *
- * Return: 0 if success
+ * Return: 0
+ *
  */
-
 int main(void)
 {
-        int i;
+	int i = 0;
 
-        for (i = 0; i < 10; i++)
-        {
-            putchar(i + '0');
-            if (i != 9)
-            {
-                putchar(',');
-                putchar(' ');
-            }
-        }
-        putchar('\n');
-        return (0);
+	while (i < 10)
+	{
+		putchar(i + '0');
+		if (i < 9)
+		{
+			putchar(44);
+			putchar(32);
+		}
+		i++;
+	}
+	putchar('\n');
+
+	return (0);
 }

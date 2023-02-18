@@ -1,14 +1,18 @@
 #include <stdio.h>
 /**
- * main - main function
- *
- * Return: 0 if success
+ * main - main block
+ * Description: Print the alphabet in reverse order in lowercase.
+ * Return: 0
  */
-
 int main(void)
 {
-        for (char = 'z'; i >= 'a'; i--)
-            putchar(i);
-        putchar('\n');
-        return (0);
+	char c;
+
+	for (c = 'z'; c >= 'a'; c--)
+	{
+		putchar(c);
+	}
+	putchar('\n');
+
+	return (0);
 }

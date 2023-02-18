@@ -1,31 +1,36 @@
 #include <stdio.h>
 /**
- * main - main function
+ * main - main block
  *
- * Return: 0 if success
+ * Return: 0
+ *
  */
-
 int main(void)
 {
-        int i;
-        int j;
+	int i, j, k;
 
-        for (i = 0; i < 10; i++)
-        {
-            for (i = 0; i < 10; i++)
-            {
-                if (i < j && i != j)
-                {
-                    putchar(i + '0');
-                    putchar(j + '0');
-                    if (i + j != 17)
-                    {
-                        putchar(',');
-                        putchar(' ');
-                    }
-                }
-            }
-        }
-        putchar('\n');
-        return (0);
+	i = 0;
+
+	while (i < 100)
+	{
+		j = i % 10; /* singles digit */
+		k = i / 10; /* doubles digit */
+
+		if (k < j)
+		{
+			putchar(k + '0');
+			putchar(j + '0');
+
+			if (i < 89)
+			{
+				putchar(44);
+				putchar(32);
+			}
+		}
+
+		i++;
+	}
+	putchar('\n');
+
+	return (0);
 }
