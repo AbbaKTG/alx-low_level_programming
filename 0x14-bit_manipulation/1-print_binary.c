@@ -16,13 +16,13 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++);
-
-	for (; shifts >= 0; shifts--)
-	{
-		if ((n >> shifts) & 1)
-			printf("1");
-		else
-			printf("0");
-	}
-}
+	for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++){
+		for (; shifts >= 0; shifts--)
+		{
+			if ((n >> shifts) & 1){
+				printf("1");
+			}else{
+				printf("0");
+			}	
+		}
+	}	
